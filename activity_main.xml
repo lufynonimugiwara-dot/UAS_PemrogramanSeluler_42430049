@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Identitas (Wajib UAS) -->
+    <TextView
+        android:id="@+id/tvIdentitas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yohana Imanuel - 42430049"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginBottom="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <!-- Sisi Kiri: Kontrol (Cari & Sort) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingEnd="8dp">
+
+            <EditText
+                android:id="@+id/etSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Cari raket..." />
+
+            <Button
+                android:id="@+id/btnSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cari" />
+
+            <Button
+                android:id="@+id/btnSort"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Urutkan A-Z"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <!-- Sisi Kanan: Gambar Raket -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Katalog Raket Pro Series"
+                android:textStyle="italic" />
+
+            <ImageView
+                android:id="@+id/ivRaketMerah"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/raket_merah"
+                android:scaleType="fitCenter" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
