@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Area Foto Raket -->
+    <ImageView
+        android:id="@+id/img_raket_detail"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src="@drawable/ic_launcher_background" />
+
+    <!-- Nama Raket -->
+    <TextView
+        android:id="@+id/tv_nama_raket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nama Raket Pro"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <!-- Spesifikasi Teknis -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Spesifikasi: \n- Berat: 4U (80-84g) \n- Tension: 28-30 Lbs"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kembali"
+        android:layout_marginTop="20dp" />
+
+</LinearLayout>
