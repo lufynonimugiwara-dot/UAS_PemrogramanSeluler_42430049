@@ -1,47 +1,30 @@
 package com.example.uas_pemrogramanseluler_42430049
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.uas_pemrogramanseluler_42430049.ui.theme.UAS_PemrogramanSeluler_42430049Theme
+import android.widget.LinearLayout
+import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-            UAS_PemrogramanSeluler_42430049Theme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
+        setContentView(R.layout.activity_main)
+
+        // 1. Mencari komponen item raket di activity_main.xml
+        val itemRaketYonex = findViewById<LinearLayout>(R.id.item_raket_yonex)
+
+        // 2. Logika ketika item raket diklik
+        itemRaketYonex?.setOnClickListener {
+            // Berpindah halaman dari MainActivity ke DetailActivity
+            val intent = Intent(this, DetailActivity::class.java)
+
+            // Menitipkan data spesifikasi raket untuk dibawa ke halaman detail
+            intent.putExtra("NAMA_RAKET", "Yonex Astrox 99 Pro")
+            intent.putExtra("SPEK_RAKET", "Berat: 4U (Avg. 83g)\nTension: 20-28 Lbs\nFlex: Stiff\nCocok untuk pemain menyerang.")
+            intent.putExtra("GAMBAR_RAKET", R.drawable.yonex_astrox_99)
+
+            startActivity(intent)
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    UAS_PemrogramanSeluler_42430049Theme {
-        Greeting("Android")
     }
 }

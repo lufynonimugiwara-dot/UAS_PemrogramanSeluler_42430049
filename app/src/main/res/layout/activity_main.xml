@@ -15,7 +15,9 @@
         android:textSize="18sp"
         android:layout_marginBottom="16dp" />
 
+
     <LinearLayout
+        android:id="@+id/item_raket_yonex"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">

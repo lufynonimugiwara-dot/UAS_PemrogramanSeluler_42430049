@@ -1,37 +1,36 @@
-package com.example.detailactivity
+package com.example.uas_pemrogramanseluler_42430049
 
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.*
-import androidx.compose.material3.*
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
+import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
-class DetailActivity : ComponentActivity() {
+class DetailActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            // Memanggil tampilan detail raket
-            DetailRaketScreen(onBackClick = { finish() })
+        setContentView(R.layout.activity_detail)
+
+        // 1. Hubungkan variabel dengan ID yang ada di activity_detail.xml
+        val tvNama = findViewById<TextView>(R.id.tv_nama_raket)
+        val tvSpek = findViewById<TextView>(R.id.tv_spek_raket)
+        val ivFoto = findViewById<ImageView>(R.id.iv_foto_raket)
+        val btnBack = findViewById<Button>(R.id.btn_back)
+
+        // 2. Tangkap data yang dikirim oleh MainActivity tadi
+        val namaRaket = intent.getStringExtra("NAMA_RAKET")
+        val spekRaket = intent.getStringExtra("SPEK_RAKET")
+        val gambarRaket = intent.getIntExtra("GAMBAR_RAKET", 0)
+
+        // 3. Tampilkan data ke komponen Layout
+        tvNama.text = namaRaket
+        tvSpek.text = spekRaket
+        ivFoto.setImageResource(gambarRaket)
+
+        // 4. Fungsi tombol kembali
+        btnBack.setOnClickListener {
+            finish()
         }
-    }
-}
-
-@Composable
-fun DetailRaketScreen(onBackClick: () -> Unit) {
-    Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
-        Column(modifier = Modifier.padding(16.dp)) {
-            Text(text = "Detail Raket Pro", style = MaterialTheme.typography.headlineMedium)
-            Spacer(modifier = Modifier.height(8.dp))
-            Text(text = "Spesifikasi: \n- Berat: 4U \n- Tension: 30 Lbs")
-
-            Spacer(modifier = Modifier.height(24.dp))
-
-            Button(onClick = onBackClick) {
-                Text("Kembali ke Katalog")
-            }
-        }
-    }
+         }
 }
