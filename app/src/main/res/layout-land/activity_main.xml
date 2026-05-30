@@ -6,7 +6,6 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <!-- Identitas (Wajib UAS) -->
     <TextView
         android:id="@+id/tvIdentitas"
         android:layout_width="wrap_content"
@@ -14,64 +13,46 @@
         android:text="Yohana Imanuel - 42430049"
         android:textStyle="bold"
         android:textSize="18sp"
-        android:layout_marginBottom="10dp" />
+        android:layout_marginBottom="8dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:baselineAligned="false">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-        <!-- Sisi Kiri: Kontrol (Cari & Sort) -->
-        <LinearLayout
+        <EditText
+            android:id="@+id/etSearch"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="vertical"
-            android:paddingEnd="8dp">
+            android:hint="Cari raket..." />
 
-            <EditText
-                android:id="@+id/etSearch"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Cari raket..." />
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cari"
+            android:layout_marginEnd="8dp" />
 
-            <Button
-                android:id="@+id/btnSearch"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Cari" />
-
-            <Button
-                android:id="@+id/btnSort"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Urutkan A-Z"
-                android:layout_marginTop="8dp" />
-        </LinearLayout>
-
-        <!-- Sisi Kanan: Gambar Raket -->
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Katalog Raket Pro Series"
-                android:textStyle="italic" />
-
-            <ImageView
-                android:id="@+id/ivRaketMerah"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/raket_merah"
-                android:scaleType="fitCenter" />
-        </LinearLayout>
-
+        <Button
+            android:id="@+id/btnSort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Urutkan A-Z (Bubble Sort)" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daftar Raket Pro Series:"
+        android:layout_marginTop="8dp"
+        android:textStyle="italic" />
+
+    <ListView
+        android:id="@+id/listViewRaket"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="4dp" />
 
 </LinearLayout>

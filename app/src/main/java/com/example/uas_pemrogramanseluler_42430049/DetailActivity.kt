@@ -10,27 +10,30 @@ class DetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detail)
+        setContentView(R.layout.activity_detail) // Pastikan nama layout detail kamu benar
 
-        // 1. Hubungkan variabel dengan ID yang ada di activity_detail.xml
+        // 1. Inisialisasi komponen UI dari activity_detail.xml
         val tvNama = findViewById<TextView>(R.id.tv_nama_raket)
-        val tvSpek = findViewById<TextView>(R.id.tv_spek_raket)
-        val ivFoto = findViewById<ImageView>(R.id.iv_foto_raket)
-        val btnBack = findViewById<Button>(R.id.btn_back)
 
-        // 2. Tangkap data yang dikirim oleh MainActivity tadi
+        val tvSpek = findViewById<TextView>(R.id.tv_spek_raket)
+
+        val ivFoto = findViewById<ImageView>(R.id.iv_foto_raket)
+
+        val btnBack = findViewById<Button>(R.id.btn_back)
+        // 2. Menerima data yang dititipkan dari MainActivity
         val namaRaket = intent.getStringExtra("NAMA_RAKET")
         val spekRaket = intent.getStringExtra("SPEK_RAKET")
-        val gambarRaket = intent.getIntExtra("GAMBAR_RAKET", 0)
+        // Menerima data gambar berupa ID Resource (Int). Jika tidak ada, default ke gambar gallery bawaan
+        val gambarRaket = intent.getIntExtra("GAMBAR_RAKET", android.R.drawable.ic_menu_gallery)
 
-        // 3. Tampilkan data ke komponen Layout
+        // 3. Menampilkan data ke komponen UI halaman detail
         tvNama.text = namaRaket
         tvSpek.text = spekRaket
-        ivFoto.setImageResource(gambarRaket)
+        ivFoto.setImageResource(gambarRaket) // <-- Baris krusial ini yang akan memunculkan gambar raket asli kamu!
 
-        // 4. Fungsi tombol kembali
+        // 4. Logika tombol kembali ke halaman utama
         btnBack.setOnClickListener {
-            finish()
+            finish() // Menutup DetailActivity dan otomatis kembali ke MainActivity
         }
-         }
+    }
 }

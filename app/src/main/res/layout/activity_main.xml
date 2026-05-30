@@ -6,6 +6,7 @@
     android:orientation="vertical"
     android:padding="16dp">
 
+    <!-- 1. Identitas Mahasiswa -->
     <TextView
         android:id="@+id/tvIdentitas"
         android:layout_width="wrap_content"
@@ -15,9 +16,9 @@
         android:textSize="18sp"
         android:layout_marginBottom="16dp" />
 
-
+    <!-- 2. Kotak Pencarian -->
     <LinearLayout
-        android:id="@+id/item_raket_yonex"
+        android:id="@+id/layout_search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -36,6 +37,7 @@
             android:text="Cari" />
     </LinearLayout>
 
+    <!-- 3. Tombol Bubble Sort -->
     <Button
         android:id="@+id/btnSort"
         android:layout_width="match_parent"
@@ -43,12 +45,20 @@
         android:text="Urutkan A-Z (Bubble Sort)"
         android:layout_marginTop="8dp" />
 
+    <!-- 4. Label Daftar -->
     <TextView
         android:id="@+id/tvLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Daftar Raket Pro Series:"
         android:layout_marginTop="16dp"
-        android:textStyle="italic" />
+        android:textStyle="italic"
+        android:layout_marginBottom="8dp" />
+
+    <!-- 5. LISTVIEW: Tempat otomatis memunculkan semua raket -->
+    <ListView
+        android:id="@+id/listViewRaket"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </LinearLayout>

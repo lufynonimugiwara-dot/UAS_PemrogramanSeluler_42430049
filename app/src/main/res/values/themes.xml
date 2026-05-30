@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <style name="Theme.UAS_PemrogramanSeluler_42430049" parent="android:Theme.Material.Light.NoActionBar" />
+    <!-- Tema utama aplikasi yang kompatibel dengan AppCompatActivity -->
+    <style name="Theme.UAS_PemrogramanSeluler_42430049" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <!-- Warna utama aplikasi (bisa disesuaikan nanti) -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryDark">@color/purple_700</item>
+        <item name="colorAccent">@color/teal_200</item>
+    </style>
 </resources>
