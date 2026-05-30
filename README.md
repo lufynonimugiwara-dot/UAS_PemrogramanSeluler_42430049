@@ -50,26 +50,28 @@ Tugas Akhir untuk memenuhi ujian akhir semester mata kuliah **Pemrograman Selule
 
 ---
 
+---
+
 ## 📸 Bukti Screenshot Aplikasi UAS
 
 ### 1. Tampilan Utama Aplikasi
 
 **Tampilan Tegak (Portrait):**
-![Tampilan Portrait](../../ss_portrait.jpeg)
+![Tampilan Portrait](ss_portrait.jpeg)
 
 **Tampilan Miring (Landscape):**
-![Tampilan Landscape](../../ss_landscape.jpeg)
+![Tampilan Landscape](ss_landscape.jpeg)
 
 ### 2. Pengujian Fitur Aplikasi
 Berikut adalah bukti bahwa fitur pencarian data dan pengurutan Bubble Sort (A-Z) sudah berjalan lancar:
 
 **Hasil Pencarian Data:**
-![Hasil Pencarian](../../pencarian.jpeg)
+![Hasil Pencarian](pencarian.jpeg)
 
 **Hasil Pengurutan Data (A-Z):**
-![Hasil Pengurutan](../../ss_pengurutan.jpeg)
+![Hasil Pengurutan](ss_pengurutan.jpeg)
 
 ### 3. Validasi Logcat Android Studio
 Berikut adalah bukti jendela Logcat di Android Studio yang menampilkan identitas NIM 42430049:
 
-![Jendela Logcat NIM](../../ss_logcat.jpeg)
+![Jendela Logcat NIM](ss_logcat.jpeg)
