@@ -74,4 +74,4 @@ Berikut adalah bukti bahwa fitur pencarian data dan pengurutan Bubble Sort (A-Z)
 ### 3. Validasi Logcat Android Studio
 Berikut adalah bukti jendela Logcat di Android Studio yang menampilkan identitas NIM 42430049:
 
-![Jendela Logcat NIM](ss_logcat.jpeg)
+![Jendela Logcat NIM](ss_logcat.png)

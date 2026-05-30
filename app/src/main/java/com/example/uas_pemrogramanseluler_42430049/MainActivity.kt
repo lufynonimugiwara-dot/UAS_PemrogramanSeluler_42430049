@@ -40,6 +40,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+        android.util.Log.d("UAS_NIM", "Aplikasi Katalog Raket - Yohana Imanuel - 42430049")
         // Salin data awal ke daftar yang akan ditampilkan di screen
         ResetDataTampilan()
 
